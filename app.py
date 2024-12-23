@@ -29,7 +29,7 @@ if uploaded_file:
     # analyse the image
     with st.spinner("Generating Information......"):
         get_chip_type = st.write_stream(graph_streamer(IMAGE_NAME))
-        st.toast('Chip Classification Successful!', icon='✅')
+        st.toast('Information Generation Successful!', icon='✅')
 
     if not get_chip_type:
         st.error("Cannot Interpret the Image", icon = "❌")

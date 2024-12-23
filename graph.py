@@ -78,10 +78,6 @@ client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
 index = pc.Index(host=os.environ["INDEX_HOST"])
 
-# to check user query greeting or not
-class GreetingTester(BaseModel):
-    greeting: bool = Field(None, description = "Greeting or Not")
-
 
 # this is be default has the messages and add_messages reducers
 class BotState(MessagesState):
